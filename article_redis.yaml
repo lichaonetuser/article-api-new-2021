@@ -1,0 +1,88 @@
+article_detail:
+    host: 192.168.20.143
+    port: 6379
+    db: 1
+article_channel:
+    host: 192.168.20.143
+    port: 6379
+    db: 2
+article_sub_category:
+    host: 192.168.20.143
+    port: 6379
+    db: 3
+article_source:
+    host: 192.168.20.143
+    port: 6379
+    db: 4
+article_related:
+    host: 192.168.20.143
+    port: 6379
+    db: 5
+article_itag:
+    host: 192.168.20.143
+    port: 6379
+    db: 6
+feed_queue:
+    host: 192.168.20.143
+    port: 6379
+    db: 13
+feedback_faq:
+    host: 192.168.20.143
+    port: 6379
+    db: 11
+uid_info:
+    host: 192.168.20.143
+    port: 6379
+    db: 10
+user_action_dig:
+    host: 192.168.20.143
+    port: 6379
+    db: 14
+user_action_bury:
+    host: 192.168.20.143
+    port: 6379
+    db: 14
+user_action_not_interest:
+    host: 192.168.20.143
+    port: 6379
+    db: 14
+user_action_delete:
+    host: 192.168.20.143
+    port: 6379
+    db: 14
+user_action_counter:
+    host: 192.168.20.143
+    port: 6379
+    db: 15
+breaking_news:
+    host: 192.168.20.143
+    port: 6379
+    db: 9
+job_queue:
+    host: 192.168.20.143
+    port: 6379
+    db: 9
+guide:
+    host: 192.168.20.143
+    port: 6379
+    db: 10
+article_banner:
+    host: 192.168.20.143
+    port: 6379
+    db: 11
+youtube_hotlink:
+    host: 192.168.20.143
+    port: 6379
+    db: 12
+youtube_hotlink_queue:
+    host: 192.168.20.143
+    port: 6379
+    db: 12
+udid_status:
+    host: 192.168.20.143
+    port: 6379
+    db: 13
+message_write:
+    host: 192.168.20.143
+    port: 6379
+    db: 13

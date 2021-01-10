@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WorldCup board simple list</title>
+    <style type="text/css">
+        body {
+            font-size: 13px;
+        }
+        table, th, td {
+            border:1px solid #000;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1>WorldCup board simple list (latest 40 items)</h1>
+    <div>
+        <table>
+            <tr>
+                <th> id </th>
+                <th> pk </th>
+                <th> content </th>
+                <th> ctime </th>
+            </tr>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.id }}</td>
+                <td>{{ item.uid }}</td>
+                <td>{{ item.content }}</td>
+                <td>{{ item.ctime }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

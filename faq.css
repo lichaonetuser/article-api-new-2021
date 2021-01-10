@@ -1,0 +1,61 @@
+body {
+    background-color: #282528;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.main {
+    color: #b9b9b9;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    margin-top: 50px;
+}
+
+.ask {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    margin-top: 20px;
+
+}
+
+.answer {
+    position: relative;
+    font-size: 15px;
+    line-height: 20px;
+    overflow: visible;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    margin-top: -10px;
+}
+
+.question {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+a:link {
+    font-size: 18px;
+    color: #b9b9b9;
+}
+
+a:visited {
+    font-size: 18px;
+    color: #b9b9b9;
+}
+
+a:hover {
+    font-size: 18px;
+}

@@ -1,0 +1,50 @@
+user:
+    host: 192.168.20.204
+    port: 3306
+    user: root
+    passwd: root123
+    db: static_data
+    charset: utf8mb4
+    mincached: 0
+    maxcached: 1
+    maxshared: 1
+yaml_mysql_config:
+    host: 192.168.20.204
+    port: 3306
+    user: root
+    passwd: root123
+    db: static_data
+    charset: utf8mb4
+    mincached: 0
+    maxcached: 1
+    maxshared: 1
+article_api:
+    host: 192.168.20.204
+    port: 3306
+    user: root
+    passwd: root123
+    db: article_api
+    charset: utf8mb4
+    mincached: 0
+    maxcached: 1
+    maxshared: 1
+feedback:
+    host: 192.168.20.204
+    port: 3306
+    user: root
+    passwd: root123
+    db: feedback
+    charset: utf8mb4
+    mincached: 0
+    maxcached: 1
+    maxshared: 1
+static_data:
+    host: 192.168.20.204
+    port: 3306
+    user: root
+    passwd: root123
+    db: static_data
+    charset: utf8mb4
+    mincached: 0
+    maxcached: 1
+    maxshared: 1

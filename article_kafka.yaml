@@ -1,0 +1,6 @@
+pb_app_log:
+    bootstrap_servers:
+        - 192.168.20.124:9092
+    retries: 12
+    acks: 1
+    batch_size: 20
