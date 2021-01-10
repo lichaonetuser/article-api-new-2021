@@ -1,0 +1,84 @@
+version: 1
+
+formatters:
+  simple:
+    format: "%(asctime)s\t%(funcName)s:%(lineno)s\t%(thread)s\t%(levelname)s\t%(message)s"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: simple
+    stream: ext://sys.stdout
+  root_handler:
+    class: pyutil.program.multi_rotate_logger.MultiProcessRotatingFileHandler
+    level: INFO
+    formatter: simple
+    filename: ../log/root.log
+    when: midnight
+  api_handler:
+    class: pyutil.program.multi_rotate_logger.MultiProcessRotatingFileHandler
+    level: INFO
+    formatter: simple
+    filename: ../log/api.log
+    when: midnight
+  exc_handler:
+    class: pyutil.program.multi_rotate_logger.MultiProcessRotatingFileHandler
+    level: INFO
+    formatter: simple
+    filename: ../log/exception.log
+    when: midnight
+  user_handler:
+    class: pyutil.program.multi_rotate_logger.MultiProcessRotatingFileHandler
+    level: INFO
+    formatter: simple
+    filename: ../log/user.log
+    when: midnight
+  advertise_handler:
+    class: pyutil.program.multi_rotate_logger.MultiProcessRotatingFileHandler
+    level: INFO
+    formatter: simple
+    filename: ../log/advertise.log
+    when: midnight
+  app_log_handler:
+    class: pyutil.program.multi_rotate_logger.MultiProcessRotatingFileHandler
+    level: INFO
+    formatter: simple
+    filename: ../log/app_log.log
+    when: midnight
+
+loggers:
+  root:
+    level: INFO
+    handlers:
+      - root_handler
+  api:
+    level: INFO
+    handlers:
+      - console
+      - api_handler
+    propagate: no
+  exc:
+    level: INFO
+    handlers:
+      - console
+      - exc_handler
+    propagate: no
+  user:
+    level: INFO
+    handlers:
+      - console
+      - user_handler
+    propagate: no
+  advertise:
+    level: INFO
+    handlers:
+      - console
+      - advertise_handler
+    propagate: no
+  app_log:
+    level: INFO
+    handlers:
+      - console
+      - app_log_handler
+    propagate: no

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        * {
+            box-sizing: content-box;
+            margin: 0;
+            padding:0;
+        }
+        body{
+            font-family:'Microsoft YaHei','STHeiti',Helvetica,Arial,sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .main {
+            color: #b9b9b9;
+            background-color: #282528;
+            padding: 24px;
+        }
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 20px;
+            text-align: justify;
+            margin-top: 50px;
+        }
+        .ask {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: justify;
+            margin:20px 0;
+
+        }
+        .answer {
+            position: relative;
+            font-size: 15px;
+            line-height: 20px;
+            overflow: visible;
+            text-align: justify;
+        }
+
+        .question {
+            position: relative;
+            width: 100%;
+            margin-bottom: 25px;
+        }
+        a:link {
+            font-size: 18px;
+            color: #b9b9b9;
+        }
+        a:visited {
+            font-size: 18px;
+            color: #b9b9b9;
+        }
+        a:hover {
+            font-size: 18px;
+        }
+        .light{
+            background-color: #fff;
+            color: #2b2b2b;
+        }
+    </style>
+</head>
+<body>
+    <div class="main js_skin light">
+        {% autoescape off %}{{ content }}{% endautoescape %}
+    </div>
+</body>
+<script charset="utf-8" src="https://cdn.x.com/festatic/zepto-min.js" type="text/javascript"></script>
+<script charset="utf-8" src="https://cdn.x.com/festatic/util.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var params=util.getUrlStrs(window.location.href);
+    if(params.skin&&params.skin=="d"){
+        $(".js_skin").removeClass("light");
+    };
+</script>
+</html>

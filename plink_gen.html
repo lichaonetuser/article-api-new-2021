@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plink Gen</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>
+    <style type="text/css">
+        body{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app" class="ui container">
+    <h1>PLink Gen</h1>
+
+    <div class="ui stacked segment">
+        <div class="ui form">
+            <h4 class="ui dividing header">基本信息</h4>
+            <div class="field">
+                <label>备注(英文)</label>
+                <input type="text" name="memo" placeholder="MEMO" v-model="memo">
+            </div>
+            <div class="field">
+                <label>文章/图片/视频/GIF ID(Hashed(ItemID))</label>
+                <input type="text" name="aid" placeholder="AID" v-model="aid">
+            </div>
+            <div class="field">
+                <label>文章ID(article_category_id))</label>
+                <input type="text" name="article_category_id" placeholder="ACID" v-model="article_category_id">
+            </div>
+            <div class="field">
+                <label>内部分类 ID(Category ID)</label>
+                <input type="text" name="cid" placeholder="CID" v-model="cid">
+            </div>
+            <div class="field">
+                <label>频道 ID(Channel ID)</label>
+                <input type="text" name="chid" placeholder="CHID" v-model="chid">
+            </div>
+            <div class="field">
+                <label>媒体类型 (Media Type)</label>
+                <select class="ui fluid dropdown" v-model="mt">
+                    <option value="1">文章(Article)</option>
+                    <option value="2">视频(Video)</option>
+                    <option value="3">图片(Image)</option>
+                    <option value="4">段子(Essay)</option>
+                </select>
+            </div>
+            <div class="field">
+                <label>客户端行为 (OpenURL)</label>
+                <select class="ui fluid dropdown" v-model="openUrl">
+                    <option value="empty">不跳(empty)</option>
+                    <option value="world_cup">跳世界杯(worldcup)</option>
+                    <option value="detail">跳文章(detail)</option>
+                    <option value="achan">跳文章频道</option>
+                    <option value="vchan">跳视频频道</option>
+                </select>
+            </div>
+            <button class="ui primary button" v-on:click="gen()">
+                生成
+            </button>
+        </div>
+    </div>
+
+    <div class="ui stacked segment">
+        <div class="ui message">
+            <div class="header">
+                IOS基本形式(非OpenURL)
+            </div>
+            <pre>{{ objIosStr }}</pre>
+        </div>
+        <div class="ui message">
+            <div class="header">
+                ANDROID基本形式(非OpenURL)
+            </div>
+            <pre>{{ objAndroidStr }}</pre>
+        </div>
+        <div class="ui message">
+            <div class="header">
+                OpenURL
+            </div>
+            <pre>{{ objOpenUrl }}</pre>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var app = new Vue({
+        el: "#app",
+        data: {
+            aid: "",
+            article_category_id: "",
+            cid: "",
+            chid: "",
+            mt: "1",
+            objIosStr: "",
+            objAndroidStr: "",
+            objOpenUrl: "",
+            openUrl: "empty",
+            memo: "",
+            j: "0",
+        },
+        methods: {
+            gen: function() {
+                var o = [];
+                var today = new Date();
+                o.push({"name": "dt", "value": today.getFullYear() + "-" + (today.getMonth() + 1) + "-" + today.getDate()});
+                if (app.memo != "") {
+                    o.push({"name": "m", "value":  app.memo});
+                }
+                o.push({"name": "device", "value":  "ios"});
+                if (app.aid !== "") {
+                    o.push({"name": "aid", "value":  app.aid});
+                }
+                if (app.article_category_id !== "") {
+                    o.push({"name": "article_category_id", "value":  app.article_category_id});
+                }
+                if (app.cid !== "") {
+                    o.push({"name": "cid", "value":  app.cid});
+                }
+                if (app.chid !== "") {
+                    o.push({"name": "chid", "value":  app.chid});
+                }
+                if (app.mt !== "") {
+                    o.push({"name": "mt", "value":  app.mt});
+                }
+                if (app.openUrl == "empty") {
+                    o.push({"name": "j", "value": "0"});
+                } else if (app.openUrl == "world_cup") {
+                    o.push({"name": "j", "value": "1"});
+                } else if (app.openUrl == 'achan') {
+                    o.push({"name": "j", "value": "2"});
+                } else if (app.openUrl == 'vchan') {
+                    o.push({"name": "j", "value": "3"});
+                }
+                o.push({"name": "rn", "value": parseInt(Math.random() * 10000)});
+                var str = jQuery.param(o);
+                app.objIosStr = jQuery.param(o);
+                o[2]["value"] = "android";
+                app.objAndroidStr = jQuery.param(o);
+                if (app.openUrl == "empty") {
+                    app.objOpenUrl = "local://empty?ri=" + encodeURIComponent(str);
+                } else if (app.openUrl == "world_cup") {
+                    app.objOpenUrl = "local://world_cup?ri=" + encodeURIComponent(str);
+                } else if (app.openUrl == "detail") {
+                    if (app.aid === "") {
+                        alert("该类客户端动作, 需要设置文章ID");
+                        return
+                    }
+                    app.objOpenUrl = "local://detail?aid=" + app.aid + "&ri=" + encodeURIComponent(str);
+                } else if (app.openUrl == "achan") {
+                    if (app.chid === "") {
+                        alert("需要填频道id");
+                        return
+                    }
+                    app.objOpenUrl = "local://tab?index=0&channel=" + app.chid + "&ri=" + encodeURIComponent(str);
+                } else if (app.openUrl == "vchan") {
+                    if (app.chid === "") {
+                        alert("需要填频道id");
+                        return
+                    }
+                    app.objOpenUrl = "local://tab?index=1&channel=" + app.chid + "&ri=" + encodeURIComponent(str);
+                }
+            }
+        }
+    });
+</script>
+</body>
+</html>

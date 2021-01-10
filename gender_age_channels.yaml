@@ -1,0 +1,188 @@
+default:
+    channels:
+        - 1
+        - 9
+        - 6
+        - 22
+        - __for_you_article_video__
+        - 3
+        - 4
+        - 2
+        - 5
+        - 8
+        - 25
+        - 24
+        - 23
+
+    v_channels:
+        - 16
+        - 32
+        - 14
+        - 13
+        - 20
+        - 33
+        - 21
+        - 19
+        - 17
+
+
+male_teen:
+    channels:
+        - 1
+        - 6
+        - 2
+        - 23
+        - 24
+        - 9
+        - __for_you_article_video__
+        - 22
+        - 3
+        - 25
+        - 4
+        - 5
+        - 8
+          
+    v_channels:
+        - 16
+        - 32
+        - 19
+        - 20
+        - 17
+        - 33
+        - 13
+        - 14
+        - 21
+
+
+male_youth:
+    channels:
+        - 1
+        - 2
+        - 6
+        - 23
+        - __for_you_article_video__
+        - 3
+        - 4
+        - 5
+        - 9
+        - 8
+        - 24
+        - 22
+        - 25
+
+    v_channels:
+        - 16
+        - 32
+        - 17
+        - 20
+        - 33
+        - 19
+        - 13
+        - 14
+        - 21
+
+
+male_mid_age:
+    channels:
+        - 1
+        - 3
+        - 2
+        - 23
+        - 9
+        - __for_you_article_video__
+        - 4
+        - 5
+        - 8
+        - 6
+        - 24
+        - 25
+        - 22
+
+    v_channels:
+        - 16
+        - 32
+        - 17
+        - 20
+        - 33
+        - 19
+        - 13
+        - 14
+        - 21
+        
+
+female_teen:
+    channels:
+        - 1
+        - 6
+        - 9
+        - 22
+        - 25
+        - 4
+        - 5
+        - 8
+        - 24
+        - __for_you_article_video__
+        - 2
+        - 3
+
+    v_channels:
+        - 21
+        - 32
+        - 16
+        - 19
+        - 13
+        - 14
+        - 33
+        - 20
+
+
+female_youth:
+    channels:
+        - 1
+        - 6
+        - 9
+        - 22
+        - 25
+        - 3
+        - 4
+        - 5
+        - 8
+        - 24
+        - __for_you_article_video__
+        - 2
+
+    v_channels:
+        - 16
+        - 32
+        - 21
+        - 19
+        - 13
+        - 14
+        - 33
+        - 20
+
+
+female_mid_age:
+    channels:
+        - 1
+        - 6
+        - 3
+        - 9
+        - 22
+        - 25
+        - __for_you_article_video__
+        - 4
+        - 5
+        - 8
+        - 2
+        - 24
+
+    v_channels:
+        - 16
+        - 32
+        - 13
+        - 14
+        - 19
+        - 21
+        - 33
+        - 20

@@ -1,0 +1,52 @@
+syntax = "proto2";
+
+message Header {
+	optional string messagetype   = 1; // iOS:bundle id, Android: package
+    optional string app_id   = 2; // iOS:bundle id, Android: package
+    optional string app_name = 3;
+    optional string carrier  = 4;
+    optional string channel  = 5;
+    optional string lang     = 6; // system lang
+    optional string channel_lang = 7; // app lang
+    optional string device_type = 8; // 手机型号
+    optional bool   jail_break  = 9; // iOS: jail_break, Android: root
+    optional string model       = 10; // model, eg: x86_64
+    optional string osn         = 11; // iPhone OS
+    optional string osv         = 12; // 系统版本,如9.1
+    optional string phone_type  = 13; // 'android', 'iphone'
+    optional string unique_device_id = 14;
+    optional string version     = 15; // ios: version; Android: version_name
+    optional int64  version_code = 16; // 给代码用的版本号码，例如20
+    optional string access      = 17; // 3G, 4G, WIFI, other
+    optional string resolution  = 18;
+    optional int64  timezone    = 19; // The manufacturer of the product/hardware
+    optional string device_manufacturer = 20;
+    optional string ip_address  = 21; // add by server
+    optional string geo         = 22; // add by server
+    optional string geo_city    = 23; // add by server
+    optional string uid         = 24; // add by server
+    optional string sign_hash   = 25; // Android only
+    optional string android_id  = 26; // 不保证唯一，端上会做fake生成udid
+    optional string client_id   = 27; // 端上生成的udid
+    optional string install_id  = 28; // 本次安装记录id
+    optional int64  os_api      = 29; // api_level, eg: 17
+    optional string device_brand = 30; // the consumer-visible brand
+    optional int64  dpi          = 31; // eg: 230 460
+    optional string country      = 32; // 系统获取的国家信息
+    optional string carrier_code = 33; // the alphabetic name of current registered operator
+    optional string rom          = 34; // 系统rom名称，ro.build.version.incremental
+    optional bool   is_first_launch = 35; // 初次启动
+    optional bool   is_update_first_launch = 36; // 升级后初次启动
+    optional string e_flag        = 37; // ab实验名称
+}
+
+enum Access {
+    ACCESS_WIFI  = 0;
+    ACCESS_3G    = 1;
+    ACCESS_4G    = 2;
+    ACCESS_OTHER = 3;
+}
+
+enum ContentType {
+    CONTENT_ARTICLE = 0;
+}

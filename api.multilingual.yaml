@@ -1,0 +1,151 @@
+Comment_InappropriateContentPleaseEdit:
+  zh-hans: "您发表的言论含有不当内容，请修改后重新发表。"
+  zh-hant: "您發表的言論含有不當內容，請修改後重新發表。"
+  ja: "レビューに不適切な内容が含まれており、修正後の投稿をお願いいたします。"
+  ko: "당신의 발언 부적절. 게시를 수정하십시오."
+  en: "Inappropriate content detected. Please edit and resubmit."
+  _: "Inappropriate content detected. Please edit and resubmit."
+
+Moment_PostedComment:
+  zh-hans: " 发表了评论"
+  zh-hant: " 發表了評論"
+  ja: " レビューを投稿しました"
+  ko: " 댓글"
+  en: " posted a comment"
+  _: " posted a comment"
+
+Activity_RewardTempraryDownloads:
+  zh-hans: "感谢参与活动，今天可额外下载{}首歌曲"
+  zh-hant: "感謝參與活動，今天可額外下載{}首歌曲"
+  ja: "キャンペーンを参加してくださって誠にありがとうございます。今日のダウンロード回数を{}曲増えます。"
+  ko: "참여, 오늘 주셔서 감사합니다 {} 추가로 노래를 다운로드 할 수 있습니다"
+  en: "Thank you for participating the activity. {} more tracks to downloads today."
+  _: "Thank you for participating the activity. {} more tracks to downloads today."
+
+Comment_CommentDeleted:
+  zh-hans: "评论已删除"
+  zh-hant: "評論已刪除"
+  ja: "レビューが削除されました"
+  ko: "Comment Deleted"
+  en: "Comment Deleted"
+  _: "Comment Deleted"
+
+Tip_DownloadHistoryOverLimit:
+  zh-hans: "您已下载超过1000首歌曲，目前仅保存最新的1000条记录。"
+  zh-hant: "您已下載超過1000首歌曲，目前僅保存最新的1000條記錄。"
+  ja: "ダウンロードが1000曲を超えました。最新の1000曲のみダウンロード履歴が保存されます。"
+  ko: "현재 최신 1000 개 개의 레코드를 저장, 1000 개 이상의 노래를 다운로드해야합니다."
+  en: "You have downloaded more than 1000 tracks. Only the latest 1000 will be recorded."
+  _: "You have downloaded more than 1000 tracks. Only the latest 1000 will be recorded."
+
+Channel_Recommend:
+  zh-hans: "推荐"
+  zh-hant: "推薦"
+  ja: "おすすめ"
+  ko: "For You"
+  en: "For You"
+  _: "For You"
+
+Discover_Recommend:
+  zh-hans: "每日推荐"
+  zh-hant: "每日推薦"
+  ja: "おすすめ"
+  ko: "Recommend"
+  en: "Recommend"
+  _: "Recommend"
+
+Discover_ReccommedRuleBrief:
+  zh-hans: "每天凌晨更新"
+  zh-hant: "每天凌晨更新"
+  ja: "毎日朝方に更新"
+  ko: "Update every morning"
+  en: "Update every morning"
+  _:  "Update every morning"
+
+Discover_ReccommedRuleBrief:
+  zh-hans: "每天凌晨更新"
+  zh-hant: "每天凌晨更新"
+  ja: "毎日朝方に更新"
+  ko: "Update every morning"
+  en: "Update every morning"
+  _:  "Update every morning"
+
+Exc_Need_Login:
+  zh-hans: " 请登录"
+  zh-hant: "請登錄"
+  ja: "ログインしてください"
+  ko: "로그인"
+  en: "Please Login"
+  _:  "Please Login"
+
+Exc_Playlist_Not_Found:
+  zh-hans: "歌单异常"
+  zh-hant: "歌單異常"
+  ja: "プレイリスト異常"
+  ko: "이상 하나의 노래"
+  en: "Playlist Error"
+  _:  "Playlist Error"
+
+Exc_Playlist_Name_Illegal:
+  zh-hans: "歌单名称异常，请重新填写"
+  zh-hant: "歌單名稱異常，請重新填寫"
+  ja: "プレイリスト名に異常があるため、再記入をお願いします。"
+  ko: "예외의 싱글 곡 이름을 다시 작성하십시오"
+  en: "Playlist name error, please modify."
+  _:  "Playlist name error, please modify."
+
+Exc_Playlist_Mismatch:
+  zh-hans: "歌单异常"
+  zh-hant: "歌單異常"
+  ja: "プレイリスト異常"
+  ko: "이상 하나의 노래"
+  en: "Playlist Error"
+  _:  "Playlist Error"
+
+Exc_Playlist_Item_Mismatch:
+  zh-hans: "歌单异常"
+  zh-hant: "歌單異常"
+  ja: "プレイリスト異常"
+  ko: "이상 하나의 노래"
+  en: "Playlist Error"
+  _:  "Playlist Error"
+
+Exc_Playlist_Full:
+  zh-hans: "歌单数目已达上限，无法创建更多歌单"
+  zh-hant: "歌單數目已達上限，無法創建更多歌單"
+  ja: "プレイリストの数が上限を超えます。これ以上作成できません。"
+  ko: "노래 한 곡의 수는 한계에 도달, 당신은 혼자가 더 많은 노래를 만들 수 없습니다"
+  en: "Playlist amount has reached the limit"
+  _:  "Playlist amount has reached the limit"
+
+Exc_Playlist_Item_Full:
+  zh-hans: "歌单内歌曲数目已达上限，无法添加更多歌曲"
+  zh-hant: "歌單內歌曲數目已達上限，無法添加更多歌曲"
+  ja: "曲数が上限を超えました。これ以上追加できません。"
+  ko: "노래 목록에서 노래의 최대 수에 도달했습니다, 당신은 더 많은 노래를 추가 할 수 없습니다"
+  en: "Track amount has reached the limit"
+  _:  "Track amount has reached the limit"
+
+Rank_LatestHits:
+  zh-hans: "新歌速递"
+  zh-hant: "新歌速遞"
+  ja: "新着ミュージック"
+  ko: "택배 노래"
+  en: "Latest Hits"
+  _:  "Latest Hits"
+
+Share_AppTitle:
+  zh-hans: "下载Android最新版本Music FM"
+  zh-hant: "下載Android最新版本Music FM"
+  ja: "iOS／Androidの最新バージョンをダウンロード"
+  ko: "Download Android Music FM Now!"
+  en: "Download Android Music FM Now!"
+  _:  "Download Android Music FM Now!"
+
+Share_AppContent:
+  zh-hans: "下载Android最新版本Music FM。{}"
+  zh-hant: "下載Android最新版本Music FM。{}"
+  ja: "Androidの最新バージョンをダウンロードく {}"
+  ko: "Download the latest version of Music FM for Android. {}"
+  en: "Download the latest version of Music FM for Android. {}"
+  _: "Download the latest version of Music FM for Android. {}"

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FE debug</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/2.2.0/jquery.min.js"></script>
+    <style type="text/css">
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .left {
+            left: 0;
+            background-color: #eee;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .box {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="split left">
+            <div class="box">
+                <button v-on:click="preview">预览</button>
+            </div>
+            <div class="box">
+                <h2>参数(json)</h2>
+                <textarea rows="10" style="width: 100%" v-model="params"></textarea>
+            </div>
+            <div class="box">
+                <h2>内容(html)</h2>
+                <textarea rows="30" style="width: 100%" v-model="body"></textarea>
+            </div>
+        </div>
+        <div class="split right">
+            <iframe id="iframe_preview" frameborder="0" width="80%" height="100%">
+            </iframe>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var app = new Vue({
+            el: "#app",
+            data: {
+                params: "",
+                body: ""
+            },
+            methods: {
+                preview: function() {
+                    console.log(app.params);
+                    console.log(app.body);
+                    $.post(
+                        'http://test.api.bigappinfo.com/__debug__/fe_dbg/',
+                        {
+                            params: app.params,
+                            body: app.body
+                        },
+                        function(data) {
+                            var win = window.open('', '', '');
+                            win.document.write(data);
+                        }
+                    );
+                }
+            }
+        });
+    </script>
+</body>
+</html>
